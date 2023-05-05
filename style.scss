@@ -1,0 +1,280 @@
+@import "./bootstrap-5.3.0-alpha2/scss/bootstrap.scss";
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Black+Ops+One&family=Golos+Text:wght@500&family=Henny+Penny&family=Kanit&family=Lato:wght@300&family=Lobster&family=Open+Sans:wght@500&family=Oswald:wght@400;700&family=PT+Sans:wght@700&family=Permanent+Marker&family=Public+Sans:wght@500&family=Righteous&family=Roboto&family=Rowdies&family=Rubik+80s+Fade&family=Rubik+Distressed&family=Rubik+Microbe&family=Secular+One&display=swap');
+
+$defaultSeconds: 3s;
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Raleway', sans-serif;
+}
+span{
+	font-size: 40px;
+	font-family: 'PT Sans', sans-serif;
+}
+.flex-container {
+	
+	height: 283px;
+	width: 100%;
+	display: -webkit-flex; /* Safari */
+	display: flex;
+	overflow: hidden;
+	@media screen and (max-width: 768px) {
+		flex-direction: column;
+	}
+}
+.flex-title {
+	color: #f1f1f1;
+	position: relative;
+	font-size: 40px;
+	margin: auto;
+	text-align: center;
+	transform: rotate(90deg);
+	top: 25%;
+	-webkit-transition: all 500ms ease;
+	-moz-transition: all 500ms ease;
+	-ms-transition: all 500ms ease;
+	-o-transition: all 500ms ease;
+	transition: all 500ms ease;
+	a{
+		display: none;
+	}
+	
+}
+.flex-about {
+	opacity: 0;
+	color: #f1f1f1;
+	position: relative;
+	width: 70%;
+	height:44%;
+	font-size: 30px;
+	padding: 5%;
+	top: 20%;
+	border: 2px solid rgb(0, 68, 255);
+	border-radius: 10px;
+	line-height: 0.9;
+	margin: auto;
+	text-align: left;
+	transform: rotate(0deg);
+	-webkit-transition: all 500ms ease;
+	-moz-transition: all 500ms ease;
+	-ms-transition: all 500ms ease;
+	-o-transition: all 500ms ease;
+	transition: all 500ms ease;
+	p{
+		color: rgb(0, 68, 255);
+	}
+	@media screen and (max-width: 768px) {
+		display: none;
+		
+	}
+}
+
+
+.flex-slide {
+	-webkit-flex: 1;  /* Safari 6.1+ */
+	-ms-flex: 1;  /* IE 10 */    
+	flex: 1;
+	cursor: pointer;
+	-webkit-transition: all 500ms ease;
+	-moz-transition: all 500ms ease;
+	-ms-transition: all 500ms ease;
+	-o-transition: all 500ms ease;
+	transition: all 500ms ease;
+	@media screen and (max-width: 768px) {
+		overflow: auto;
+		overflow-x: hidden;
+	}
+}
+.flex-slide p {
+	@media screen and (max-width: 768px) {
+		font-size: 2em;
+	}
+} 
+img{
+	width: 400px;
+} 
+.flex-slide:hover {
+	-webkit-flex-grow: 3;
+	flex-grow: 3;
+}
+a{
+	
+	text-decoration: none;
+	font-weight: 400;
+	color:rgb(10, 66, 252);
+}
+.home {
+	
+	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(img/3d-project-5.png);
+	background-size: cover;
+	background-position:inherit;
+	
+	@media screen and (min-width: 768px) {
+		animation: aboutFlexSlide $defaultSeconds 1;
+		animation-delay: 0s;
+	}
+}
+
+@keyframes aboutFlexSlide {
+	0% {
+		-webkit-flex-grow: 1;
+		flex-grow: 1;
+	}
+	50% {
+		-webkit-flex-grow: 3;
+		flex-grow: 3;
+	}
+	100% {
+		-webkit-flex-grow: 1;
+		flex-grow: 1;
+	}
+}
+
+.flex-title-home {
+	@media screen and (min-width: 768px) {
+		transform: rotate(90deg);
+		top: 25%;
+		animation: aboutFlexSlide $defaultSeconds 1;
+		animation-delay: 0s;
+	}
+}
+
+
+
+@keyframes homeFlextitle {
+	0% {
+		transform: rotate(90deg);
+		top: 25%;
+	}
+	50% {
+		transform: rotate(0deg);
+		top: 25%;
+	}
+	100% {
+		transform: rotate(90deg);
+		top: 25%;
+	}
+}
+
+.flex-about-home {
+	opacity: 0;
+	@media screen and (min-width: 768px) {
+		animation: aboutFlexSlide $defaultSeconds 1;
+		animation-delay: 0s;
+	}
+}
+
+@keyframes flexAboutHome {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+
+
+.about {
+	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(img/vfx-6.jpg);
+	background-size: cover;
+	background-position:inherit;
+		
+}
+.contact-form {
+	width: 100%;
+}
+input {
+	width: 100%;
+}
+textarea {
+	width: 100%;	
+}
+.contact {
+		background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(img/vedio-editing-6.jpg);
+	background-size: cover;
+	background-position:inherit;
+	
+}
+.work {
+		background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(img/sound-editing-1.jpg);
+	background-size: cover;
+	background-position: inherit;
+	
+}
+
+//second row
+
+.graphic {
+	
+	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(img/Brochure-design-1.jpg);
+	background-size: cover;
+	background-position:inherit;
+	
+	@media screen and (min-width: 768px) {
+		animation: aboutFlexSlide $defaultSeconds 1;
+		animation-delay: 0s;
+	}
+}
+.flex-title-graphic {
+	@media screen and (min-width: 768px) {
+		transform: rotate(90deg);
+		top: 25%;
+		animation: aboutFlexSlide $defaultSeconds 1;
+		animation-delay: 0s;
+	}
+}
+.flex-about-graphic {
+	opacity: 0;
+	@media screen and (min-width: 768px) {
+		animation: aboutFlexSlide $defaultSeconds 1;
+		animation-delay: 0s;
+	}
+}
+.animation {
+	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(img/animation-1.jpg);
+	background-size: cover;
+	background-position:inherit;
+		
+}
+.web {
+	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(img/web-design-1.jpg);
+background-size: cover;
+background-position: inherit;
+
+}
+.ui-ux {
+	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(img/ui-ux-design-1.jpg);
+background-size: cover;
+background-position:inherit;
+
+}
+
+@media screen and (max-width: 768px) {
+	.flex-slide{
+		height:180px;
+	}
+	
+	.flex-title{
+        transform: rotate(0deg) !important;
+	font-size: 28px;
+	top:5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	}
+	.flex-title a{
+		display: block;
+		width: 100px;
+	}
+}
+
+
+
+
+

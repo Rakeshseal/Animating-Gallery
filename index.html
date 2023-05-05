@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAD Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="flex-container">
+	        
+            <div class="flex-slide home">
+                <div class="flex-title flex-title-home"><span>3</span>D<a target="_blank" href="img/3d-project-5.png">Click.</a></div>
+                <a target="_blank" href="img/3d-project-5.png"><div class="flex-about flex-about-home"><p>Click here and show the 3d project</p></div></a>
+            </div>
+            <div class="flex-slide about">
+                <div class="flex-title"  >Vfx<a target="_blank" href="img/Sci-Fi VFX -video-1.mp4">Click.</a></div>
+                <a target="_blank" href="img/Sci-Fi VFX -video-1.mp4"><div class="flex-about">
+                    <p>Click here and show the vfx project</p></div>
+                </a>
+            </div>
+            <div class="flex-slide work">
+                <div class="flex-title" style="margin-top: 34px;">Sound Editing<a target="_blank" href="img/sound-editing-1.jpg">Click.</a> </div>
+                <a target="_blank" href="img/sound-editing-1.jpg"><div class="flex-about"><p>Click here and show the sound effect project</p></div></a>
+                    
+                
+            </div>
+            <div class="flex-slide contact">
+                <div class="flex-title" style="margin-top: 34px;">Vedio Editing<a target="_blank" href="img/video-editing video.mp4">Click.</a> </div>
+                        
+                            <a target="_blank" href="img/video-editing video.mp4"><div class="flex-about"><p>Click here and show the vedio editing project</p></div></a>
+                            
+        
+                
+            </div>
+        </div>
+
+        <!--Second Row-->
+
+        <div class="flex-container" style="margin-top: 10px;">
+	        
+            <div class="flex-slide graphic">
+                <div class="flex-title flex-title-graphic">Graphic<a target="_blank" href="img/Brochure-design-1.jpg">Click.</a></div>
+                <a target="_blank" href="img/Brochure-design-1.jpg"><div class="flex-about flex-about-graphic"><p>Click here and show the graphic project</p></div></a>
+            </div>
+            <div class="flex-slide animation">
+                <div class="flex-title" style="margin-top: 14px;">Animation<a target="_blank" href="img/animation-1.jpg">Click.</a></div>
+                <a target="_blank" href="img/animation-1.jpg"><div class="flex-about"> <p>Click here and show the animation project</p></div>
+                   
+                </a>
+            </div>
+            <div class="flex-slide ui-ux">
+                <div class="flex-title">Ui/Ux<a target="_blank" href="img/ui-ux-design-1.jpg">Click.</a></div>
+                <a target="_blank" href="img/ui-ux-design-1.jpg"><div class="flex-about"><p>Click here and show the ui/ux project</p></div></a>
+                    
+                
+            </div>
+            <div class="flex-slide web">
+                <div class="flex-title" style="margin-top: 20px;">Web<a target="_blank" href="img/web-design-1.jpg">Click.</a></div>
+                       
+                            <a target="_blank" href="img/web-design-1.jpg"> <div class="flex-about"><p>Click here and show the web design project</p></div></a>
+                            
+        
+                
+            </div>
+        </div>
+    </div>
+    <script >
+        (function(){
+            $(".flex-slide").each(function(){
+                $(this).hover(function(){
+                    $(this).find('.flex-title').css({
+                        transform: 'rotate(0deg)',
+                        top: '10%'
+                    });
+                    $(this).find('.flex-about').css({
+                        opacity: '1'
+                    });
+                }, function(){
+                    $(this).find('.flex-title').css({
+                        transform: 'rotate(90deg)',
+                        top: '25%'
+                    });
+                    $(this).find('.flex-about').css({
+                        opacity: '0'
+                    });
+                })
+            });
+        })();
+    </script>
+</body>
+</html>
